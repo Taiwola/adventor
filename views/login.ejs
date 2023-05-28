@@ -1,0 +1,39 @@
+<%- include('./partials/authLogHeader') %>
+<main>
+  <article>
+    <section class="section-auth">
+      <div class="container">
+        <div class="content">
+          <h1 class="content-title wtext">welcome to <br> Adventor</h1>
+        </div>
+        <div class="form-container">
+          <div class="form-context">
+            <h4 class="form-title p"> Try it free 7 days then $20/mo. thereafter</h4>
+          </div>
+          <div class="input-container">
+            <form action="" class="form auth" method="POST" id="login-form">
+              <div class="input-control">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email@example.com" class="form-input">
+                <img src="images/icon-error.svg" alt="" class="error-img hide">
+                <div class="error-message" id="email-error"></div>
+              </div>
+            
+              <div class="input-control">
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Password" class="form-input">
+                <img src="images/icon-error.svg" alt="" class="error-img hide">
+                <div class="error-message" id="password-error"></div>
+              </div>
+              <button type="submit" class="btn-secondary" >LOGIN</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/public/javascript/app.js" type="application/javascript"></script>

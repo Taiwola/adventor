@@ -1,0 +1,51 @@
+<%- include('./partials/authLogHeader') %>
+<main>
+  <article>
+    <section class="section-auth">
+      <div class="container">
+        <div class="content">
+          <h1 class="content-title h3 wtext">welcome to <br> Adventor</h1>
+          <p class="content-text p wtext"> See how experienced developers solve <br> problems in real-time. Watching <br> scripted tutorials is great,
+            but <br> understanding how developers think is <br> invaluable. </p>
+        </div>
+        <div class="form-container">
+          <div class="form-context">
+            <h4 class="form-title p"> Try it free 7 days then $20/mo. thereafter</h4>
+          </div>
+          <div class="input-container">
+            <form class="form auth" id="register-form">
+              <div class="input-control">
+                <label for="Username"></label>
+                <input type="text" name="username" id="username" placeholder="Username" class="form-input">
+                <img src="images/icon-error.svg" alt="" class="error-img hide">
+                <div class="error-message" id="error_message"></div>
+              </div>
+
+              <div class="input-control">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email@example.com" class="form-input">
+                <img src="images/icon-error.svg" alt="" class="error-img hide">
+                <div class="error-message" id="error_message"></div>
+              </div>
+
+              <div class="input-control">
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Password" class="form-input">
+                <img src="images/icon-error.svg" alt="" class="error-img hide">
+                <div class="error-message" id="error_message"></div>
+              </div>
+              <button type="submit" class="btn-secondary">SIGN UP</button>
+            </form>
+            <div class="input-context">
+              <p class="input-context-text p wtext">By clicking the button, you are agreeing to our <span><a href="/" class="terms">Terms and Services</a></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" type="application/javascript"></script>
+<script src="/public/javascript/register.js" type="application/javascript"></script>

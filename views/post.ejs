@@ -1,0 +1,33 @@
+<main>
+    <article>
+        <div class="hero">
+            <button class="btn" onclick="goBack()">Go Back</button>
+           
+                <% var postId = postAdd.id; %>
+                <% var title = postAdd.title; %>
+                <%  var rating = postAdd.rating; %>
+                <% var image = postAdd.image; %>
+                <% var interest = postAdd.status; %>
+                <%  var description = postAdd.description; %>
+
+                <div class="container">
+                    <div class="post-content">
+                        <figure class="img-holder">
+                            <img src="<%= image %>" alt="<%= title %>" class="img-cover">
+                        </figure>
+                        <div class="post-text">
+                            <h2 class="h2"><%= title %></h2>
+                            <p class="p"><%= description %></p>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </article>
+</main>
+
+<script>
+    function goBack() {
+      history.back();
+    }
+  </script>

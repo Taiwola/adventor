@@ -1,0 +1,27 @@
+<main>
+    <article>
+        <section class="compose">
+            <button class="btn" onclick="goBack()">Go Back</button>
+            <div class="container">
+                <div class="content">
+                    <form action="" class="form auth" id="createPost">
+                        <h2 class="h2">Compose Message</h2>
+                        <input type="text" name="title" id="title" class="input-text" placeholder="Enter your title">
+                        <input type="file" name="file" id="file" class="input-file" size="5000000">
+                        <textarea name="description" id="description" cols="30" rows="10" class="input-text"></textarea>
+                        <button type="submit" class="btn-secondary">SUBMIT</button>
+                        <h3 class="h3" id="message"></h3>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<script>
+    function goBack() {
+      history.back();
+    }
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" type="application/javascript"></script>
+<script src="/public/javascript/createpost.js" type="application/javascript"></script>
