@@ -67,7 +67,7 @@ const loginUser = async (req, res) => {
         return res.status(500).json({ success: false, message: 'server error' });
     }
     const response = user.format();
-    res.status(200).json({success: true, message: 'user successfully logged in', response, accessToken, redirectUrl: 'http://localhost:4000/user-page'});
+    res.status(200).json({success: true, message: 'user successfully logged in', response, accessToken, redirectUrl: 'https://adventor.onrender.com/user-page'});
 }
 
 const handleRefresh = async (req, res) => {

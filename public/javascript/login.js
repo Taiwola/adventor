@@ -3,7 +3,7 @@ const loginForm = document.getElementById('login-form');
 const accessToken = localStorage.getItem('access_token');
 
 if(accessToken){
-  window.location.href = "http://localhost:4000/user-page";
+  window.location.href = "https://adventor.onrender.com/user-page";
 }
 
 
