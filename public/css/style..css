@@ -278,6 +278,9 @@ body {
   display: none;
 }
 
+.p10{
+  margin-block-start: 10px;
+}
 
 /* .checked {
   color: var(--orange);
