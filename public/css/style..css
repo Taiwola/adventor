@@ -212,6 +212,10 @@ body {
   align-items: center;
 }
 
+.p-10{
+  padding-block-start: 10px;
+}
+
 .btn {
   border-radius: 5px;
   padding: 5px 10px;
