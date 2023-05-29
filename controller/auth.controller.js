@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
         console.log(error);
         return res.status(500).json({ success: false, message: 'server error' });
     }
-    res.json({ success: true, message: 'user created', data: newUser, redirectUrl: 'http://localhost:4000/login' });
+    res.json({ success: true, message: 'user created', data: newUser, redirectUrl: 'https://adventor.onrender.com/login' });
 };
 
 const createAdmin = async (req, res) => {
