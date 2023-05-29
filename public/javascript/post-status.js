@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }).then((response)=> {
       if(response.ok){
-        window.location.href = 'http://localhost:4000/create-post'
+        window.location.href = 'https://adventor.onrender.com/create-post'
       }
     }).catch(error=>console.log('Error', error))
   });
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }).then((response)=>{
         if(response.ok){
         localStorage.removeItem('access_token');
-        window.location.href = 'http://localhost:4000/';
+        window.location.href = 'https://adventor.onrender.com/';
       }
     }).catch(error=>console.log('Error', error));
   })
