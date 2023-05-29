@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
   if (!access_token) {
-    return window.location.href = 'http://localhost:4000';
+    return window.location.href = 'https://adventor.onrender.com/';
   } else{
     dropMenu.classList.add('visible');
   }
