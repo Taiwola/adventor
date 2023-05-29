@@ -281,6 +281,11 @@ body {
 
 .p10 {
   padding-block-start: 10px;
+  padding-inline-start: 10px;
+}
+
+.p1{
+  padding: 10px 10px;
 }
 
 /* .checked {
