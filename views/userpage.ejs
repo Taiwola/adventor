@@ -7,15 +7,15 @@
                     <h4 class="text-title btext">Take yourself</h4>
                     <h3 class="h3">Adventure Ideas</h3>
                 </div>
-                <div class="gird">
+                <% postAdd.forEach(function(post){ %>
+                    <%  var titlePost = post.title; %>
+                    <%  var postId = post.id; %>
+                    <%  var image = post.image; %>
+                    <%  var rating = post.rating; %>
+                    <%  var interest = post.status; %>
+                    <%  var description = post.description.substring(0,25); %>
+                    <div class="gird">
                     <div class='container'>
-                        <% postAdd.forEach(function(post){ %>
-                            <%  var titlePost = post.title; %>
-                            <%  var postId = post.id; %>
-                            <%  var image = post.image; %>
-                            <%  var rating = post.rating; %>
-                            <%  var interest = post.status; %>
-                            <%  var description = post.description.substring(0,25); %>
                             
                           <form method="PATCH" id="post-form">
                              <div class="grid-list">
