@@ -811,3 +811,7 @@ body {
   box-shadow: var(--shadow-1);
   margin-block-start: 20px;
 }
+
+.adv-list .flex-text, .adv-list .text-rating{
+  padding-inline: 10px;
+}
