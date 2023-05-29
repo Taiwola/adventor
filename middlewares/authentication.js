@@ -16,8 +16,8 @@ const authenticate = async (req, res, next) => {
       }
   
       try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        console.log(process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.jwt_SECRET);
+        console.log(process.env.jwt_SECRET);
         if (!decoded) {
           return res.status(403).json({ success: false, message: 'Forbidden' });
         }
