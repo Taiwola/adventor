@@ -455,7 +455,8 @@ body {
 }
 
 .grid-list .img-holder{
-  aspect-ratio: 700/400;
+  width: 400px;
+  height: max-content;
   border-radius: 5px;
   overflow: hidden;
   background-color: var(--bg-gainsboro);
