@@ -455,7 +455,7 @@ body {
 }
 
 .grid-list .img-holder{
-  width: 400px;
+  width: max-content;
   height: max-content;
   border-radius: 5px;
   overflow: hidden;
