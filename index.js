@@ -22,7 +22,7 @@ connectDB();
 
 // use middleware
 app.use(cors({
-    origin: '*'
+  origin: '*'
 }));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -60,7 +60,6 @@ const page = require('./routes/page.routes')
 
 
 // use routes
-
 app.use('/', page);
 app.use('/api/user', user);
 app.use('/api/auth', auth);
@@ -76,25 +75,25 @@ app.use('/api/post', post);
 
 //invalid routes
 app.all("*", (req, res) => {
-    res.status(404);
-    if (req.accepts("html")) {
-      res.sendFile(path.join(__dirname, "public", "404.html"));
-    } else if (req.accepts("json")) {
-      console.log("json");
-      res.json({ error: "404 Not Found" });
-    } else {
-      res.type("txt").send("404 Not Found");
-    }
-  });
+  res.status(404);
+  if (req.accepts("html")) {
+    res.sendFile(path.join(__dirname, "public", "404.html"));
+  } else if (req.accepts("json")) {
+    console.log("json");
+    res.json({ error: "404 Not Found" });
+  } else {
+    res.type("txt").send("404 Not Found");
+  }
+});
 
 
 
 
 // connect to DB
-mongoose.connection.once('open', ()=> {
-    console.log('DB Connected');
-    app.listen(PORT, ()=>{
-        console.log(`Server Running on Port ${PORT}`);
-    })
+mongoose.connection.once('open', () => {
+  console.log('DB Connected');
+  app.listen(PORT, () => {
+    console.log(`Server Running on Port ${PORT}`);
+  })
 })
 

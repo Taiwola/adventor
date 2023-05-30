@@ -7,7 +7,7 @@ const { authenticate, isAdmin } = require('../middlewares/authentication');
 const upload = require('../middlewares/uploadImages')
 
 // import controller
-const {  createPost, getAllPost, getOnePost, updateOnePost, addRating, userInterest, deleteOnePost } = require('../controller/adventure.controller');
+const { createPost, getAllPost, getOnePost, updateOnePost, addRating, userInterest, deleteOnePost } = require('../controller/adventure.controller');
 
 
 

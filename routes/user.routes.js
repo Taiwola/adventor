@@ -9,7 +9,7 @@ const {
 } = require('../controller/user.controller');
 
 // import middlewares
-const {authenticate} = require('../middlewares/authentication')
+const { authenticate } = require('../middlewares/authentication')
 
 
 // use route

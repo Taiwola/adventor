@@ -1,6 +1,11 @@
+// library/modules
 const { default: mongoose } = require('mongoose');
+
+// Models
 const Post = require('../models/adventure.model');
 const User = require('../models/user.model');
+
+// helper functions
 const cloudUpload = require('../utils/cloudinary');
 const { handleAsync, createApiError, handleResponse } = require('../utils/helpers');
 
@@ -13,9 +18,6 @@ const createPost = handleAsync(async (req, res) => {
     // }
 
     const buffer = req.file.buffer;
-    // const file = buffer.toString('base64');
-    // const file = req.file.originalname
-    // console.log(req.file);
 
     let newPost;
     try {
@@ -78,7 +80,7 @@ const updateOnePost = handleAsync(async (req, res) => {
     res.status(200).json(handleResponse(response, 'post updated'));
 })
 
-const addRating = handleAsync( 
+const addRating = handleAsync(
     async (req, res) => {
         const userId = req.user._id;
         const postId = req.params.id;
@@ -123,8 +125,8 @@ const addRating = handleAsync(
                 { new: true }
             );
 
-            const response = ratedPost.format(); 
-            res.status(200).json(handleResponse(response,'rating added'));
+            const response = ratedPost.format();
+            res.status(200).json(handleResponse(response, 'rating added'));
         } catch (error) {
             console.log(error);
             throw createApiError('internal server error', 500);
@@ -139,11 +141,11 @@ const userInterest = handleAsync(
         const user = await User.findOne({ _id: userId });
         if (!user) throw createApiError('user does not exist', 404);
         const post = await Post.findById(postId);
-    
+
         // extract intrested from post
         interested = post.interested;
-    
-    
+
+
         try {
             let postUpdate;
             // if user already has interest
@@ -168,7 +170,7 @@ const userInterest = handleAsync(
             console.log(error);
             return res.status(500).json({ success: false, message: 'Server error' });
         }
-    
+
     }
 )
 

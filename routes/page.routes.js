@@ -5,7 +5,7 @@ const router = express.Router();
 const { homePage, loginPage, registerPage, userPage, createPostPage, allAdventure, getOneAdventure } = require('../controller/page.controller');
 
 // middlewares
-const { authenticate, isAdmin} = require('../middlewares/authentication')
+const { authenticate, isAdmin } = require('../middlewares/authentication')
 
 // 
 router.get('/', homePage);

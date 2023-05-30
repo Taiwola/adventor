@@ -284,7 +284,7 @@ body {
   padding-inline-start: 10px;
 }
 
-.p1{
+.p1 {
   padding: 10px 10px;
 }
 
@@ -813,7 +813,8 @@ body {
   margin-block-start: 20px;
 }
 
-.adv-list .flex-text, .adv-list .text-rating{
+.adv-list .flex-text,
+.adv-list .text-rating {
   padding-inline: 35px;
 }
 

@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const logOut = document.getElementById('log-out');
   const dropMenu = document.getElementById('drop-menu')
 
-  
   if (!access_token) {
     return window.location.href = 'https://adventor.onrender.com/';
-  } else{
+  } else {
     dropMenu.classList.add('visible');
   }
-  
+
+  // get all the user that logged in
   fetch('/api/user/user', {
     method: 'GET',
     headers: {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
           composeBtn.classList.remove('visible');
           dropDown.classList.add('visible');
           logOut.classList.remove('visible');
-        } else if (role === 'USER'){
+        } else if (role === 'USER') {
           exploreBtn.classList.remove('visible');
           dropDown.classList.add('visible');
           logOut.classList.remove('visible');
@@ -46,15 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       console.error('Error:', error);
     });
-  
 
+  //post form
   const postForms = document.querySelectorAll('#post-form');
-
   postForms.forEach((form) => {
-    
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      
+
       const button = form.querySelector('button');
       const postId = form.querySelector('#hidden').value;
       button.textContent = '';
@@ -87,36 +85,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
- 
-
-  composeBtn.addEventListener('click', async (event)=>{
+  // add adventure 
+  composeBtn.addEventListener('click', async (event) => {
     fetch('/create-post', {
       method: 'GET',
       headers: {
         'authorization': `Bearer ${access_token}`
       }
-    }).then((response)=> {
-      if(response.ok){
+    }).then((response) => {
+      if (response.ok) {
         window.location.href = 'https://adventor.onrender.com/create-post'
       }
-    }).catch(error=>console.log('Error', error))
+    }).catch(error => console.log('Error', error))
   });
 
-  logOut.addEventListener('click', async (event)=> {
+  // log out button
+  logOut.addEventListener('click', async (event) => {
     event.preventDefault();
-    
+
     fetch('/api/auth/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'authorization': `Bearer ${access_token}`
-        }
-      }).then((response)=>{
-        if(response.ok){
+      }
+    }).then((response) => {
+      if (response.ok) {
         localStorage.removeItem('access_token');
         window.location.href = 'https://adventor.onrender.com/';
       }
-    }).catch(error=>console.log('Error', error));
+    }).catch(error => console.log('Error', error));
   })
 
 });
