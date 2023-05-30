@@ -23,10 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        console.log('User data retrieved successfully');
-        console.log(data.response);
-        console.log(data.message);
-        console.log(data.data);
         const role = data.data.role;
         if (role === 'ADMIN') {
           composeBtn.classList.remove('visible');
