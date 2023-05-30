@@ -798,6 +798,7 @@ body {
 .hero .post-content {
   margin-block-start: 40px;
   text-align: left;
+  padding-inline: 50px;
 }
 
 .post-text {
